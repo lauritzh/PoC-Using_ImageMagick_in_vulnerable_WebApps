@@ -1,18 +1,36 @@
-# README
+# Vulnerable Node.js WebApp
 
 ## Introduction
-Quick and dirty test/showcase for PostScript vulnerabilities using ImageMagick libraries and wrappers (in default configuration).
+Quick and dirty tests/showcases for PostScript vulnerabilities which occur when using ImageMagick without paying addition attention.
 
-## Setup
-```bash
+## Node.js PoC
+*/node/*-Directory
+### Setup
+```Bash
 npm i imagemagick
 npm i formidable
 ```
 
-## Usage
-```bash
+### Usage
+```Bash
 node index.js
 ```
+
+## PHP
+*/php/*-Directory
+### Setup
+```
+pecl install imagick
+```
+
+### Usage
+Attention: The built in webserver is only intended for developing or test purposes.
+```Bash
+php -S localhost:8080
+```
+
+## Payloads
+*/payloads/*-Directory: Useful payloads when tampering with vulnerable WebApps.
 
 ## Useful resources
 * https://god.owasp.de/archive/2018/slides/2018-god-mueller.pdf
