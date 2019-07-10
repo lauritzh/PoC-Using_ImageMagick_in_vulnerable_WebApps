@@ -8,6 +8,7 @@ const requestHandler = (request, response) => {
 	if (request.url == '/fileupload') {
     	var form = new formidable.IncomingForm();
     	form.parse(request, function (err, fields, files) {
+    		// insecure check: vulnerability (Part I)
     		if(files.filetoupload.name.split('.').pop() !== "png") {
     			console.log(files.filetoupload.name.split('.').pop())
     			response.write("Only .png files are allowed!")
@@ -18,7 +19,7 @@ const requestHandler = (request, response) => {
 		      	fs.rename(oldpath, newpath, function (err) {
 		        	var thumbnail_name = files.filetoupload.name.split('.').slice(0, -1).join('.')
 		        	thumbnail_name = thumbnail_name + '_thumb.png'
-		        	// The following line includes the vulnerability: im.resize() guesses the mime type
+		        	// The following line completes the vulnerability: im.resize() guesses the mime type
 					im.resize({srcPath: files.filetoupload.name, dstPath: './'+thumbnail_name, width: 256 }, function(err, stdout, stderr){
 	  					if (err) throw err;
 	  					response.writeHead(200, {'Content-Type': 'text/html'});
