@@ -1,7 +1,7 @@
 # Vulnerable Node.js WebApp
 
 ## Introduction
-Quick and dirty tests/showcases for PostScript vulnerabilities which occur when using ImageMagick without paying addition attention.
+Quick and dirty tests/showcases for PostScript vulnerabilities which occur when using ImageMagick without paying additional attention.
 
 ## Node.js PoC
 */node/*-Directory
@@ -24,7 +24,7 @@ pecl install imagick
 ```
 
 ### Usage
-Attention: The built in webserver is only intended for developing or test purposes.
+*Attention*: The built-in webserver is only intended for developing or test purposes.
 ```Bash
 php -S localhost:8080
 ```
