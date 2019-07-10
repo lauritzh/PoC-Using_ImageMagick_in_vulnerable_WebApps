@@ -1,0 +1,19 @@
+%!PS
+/infile (\/tmp\/test.txt) (r) file def 	% open files
+/buff 128 string def             		% buffer for reading
+/Courier 8 selectfont            		% name and size of font
+/LM 72 def                       		% x coord
+/ypos 800 def                    		% y coord
+LM ypos moveto
+{ % loop
+  infile buff readstring         		% read chars to the buffer
+  { %ifelse
+    buff cvs show                		% write the chars to the document
+  }{ %else
+    buff cvs show
+    infile closefile             		% close file pointer
+    exit                         		% exit the loop
+  } ifelse
+} bind loop
+
+showpage
