@@ -1,4 +1,4 @@
-# Vulnerable Node.js WebApp
+# Vulnerable WebApps
 
 ## Introduction
 Quick and dirty tests/showcases for PostScript vulnerabilities which occur when using ImageMagick without paying additional attention.
