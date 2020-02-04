@@ -1,7 +1,9 @@
 # Vulnerable WebApps
 
 ## Introduction
-Quick and dirty tests/showcases for PostScript vulnerabilities which occur when using ImageMagick without paying additional attention.
+Quick and dirty tests/showcases for PostScript vulnerabilities which occur when using ImageMagick without paying additional attention. This repository provides a playground for previously presented vulnerabilities. 
+
+For further reading and references to research made on this take a look at the [useful resources](https://github.com/lauritzh/PoC-Using_ImageMagick_in_vulnerable_WebApps/blob/master/README.md#useful-resources) section. 
 
 ## Node.js PoC
 */node/*-Directory
