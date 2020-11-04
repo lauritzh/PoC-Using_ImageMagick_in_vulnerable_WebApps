@@ -1,5 +1,7 @@
 # Vulnerable WebApps
 
+**Disclaimer**: *Any information shared within this repository must not be used with malicious intentions. Proof-of-Concepts and tools are shared for educational purpose only. Any malicious use will not hold the author responsible.*
+
 ## Introduction
 Quick and dirty tests/showcases for PostScript vulnerabilities which occur when using ImageMagick without paying additional attention. This repository provides a playground for previously presented vulnerabilities. 
 
